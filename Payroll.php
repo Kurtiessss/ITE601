@@ -1,44 +1,34 @@
- <?php
+<?php
 
+class payroll {
 
+private string $firstname "Kurt";
 
- private string Sfirstname = "Kurt"; 
- private string Slastname = "Alonso";
+private string $lastname = "Alonso";
 
- private int $prelim 78;
+private float $tax = 50;
 
- private int $midterm 80;
+private float $salary 500;
 
- private int $endterm 90;
-
- public function computeFinalGrades() {
-
- $ave=$this->prelim Sthis->midterm + $this->endterm; $ave $ave=$this->prelim $this->midterm + $this->endterm; $ave
-
-
-return $ave /3;
-
+public function computeNet(): float { 
+	return $net = $this->salary $this->tax;
 
 }
 
-public function getCompleteName(): string ( {
-}
+public function getEmployeeName(): string {
 
-return $this->lastname.", ".$this->firstname; 
+return $this->lastname. $this->firstname; }
 
-
-public function DisplayGrade(): string ( {
-
-return number format($this->compute FinalGrades(),2;
+public function displayNet(): string { return number_format($this->computeNet(),2);
 
 }
 
+}
 
-$studentGrade = new studentGrade ();
-echo "Student Name: ". $studentGrade ->getCompleteName() . "<br/>";
-echo "Final Grade ": $studentGrade->computeFinalGrades();
+$payroll new payroll();
 
+echo "Employee's Name: Spayroll->getEmployeeName(). "<br/>";
 
-
+echo "Final Net: ". Spayroll->displayNet();
 
 ?>
